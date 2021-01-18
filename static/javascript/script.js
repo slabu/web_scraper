@@ -1,7 +1,6 @@
 
 var elem = document.querySelector('.posts_table');            
 
-
 resultsTable(elem, 4, 4);
 
 function resultsTable(parent, cols, rows) {
@@ -13,8 +12,6 @@ function resultsTable(parent, cols, rows) {
     var post_id_th_text = document.createTextNode('post_id');
     post_id_th.appendChild(post_id_th_text);
     header_tr.appendChild(post_id_th);
-                
-                
 
     for (var title in posts['post_1']){
 
@@ -27,8 +24,6 @@ function resultsTable(parent, cols, rows) {
                     
     }
     table.appendChild(header_tr);
-                
-
 
     for (var key in posts){
         var tr = document.createElement('tr');
@@ -43,9 +38,7 @@ function resultsTable(parent, cols, rows) {
             var cell_text = document.createTextNode(posts[key][post]);
             td.appendChild(cell_text);
             tr.appendChild(td);
-
-
-                        
+                
         }
         table.appendChild(tr);
     }

@@ -1,14 +1,11 @@
 import requests
 from bs4 import BeautifulSoup
 
-#page_request = requests.get('https://www.ampereanalysis.com', verify=False)
-
 class WebScraper():
     def __init__ (self, scraping_url):
         self.scraping_url = scraping_url
 
         self.scraping_method_results = self.scraping(self.scraping_url)
-        
         
     def scraping(self, scraping_url):
         page_request = requests.get(scraping_url, verify=False)
