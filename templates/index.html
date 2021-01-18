@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf8">
+    <link rel="stylesheet" type="text/css" href="{{ url_for( 'static', filename='css/style.css', v=8) }}">
+</head>
+
+<body>
+    <div class="index_top">
+        <h1>Hello!</h1>
+        <h2>Here you can chose the way to scrap the posts data from <a href="https://www.ampereanalysis.com/">https://www.ampereanalysis.com/</a></h2>
+        <h2>Enjoy!</h2>
+    </div>
+
+    <div class="index_buttons">
+        <div class="options_button">
+            <a href="{{url_for('results_python')}}">Python + Jinja templates result</a>
+        </div>
+
+        <div class="options_button">
+            <a href="{{url_for('results_javascript')}}">Python + Javascript result</a>
+        </div>
+    </div>
+    
+</body>
+
+
+</html>

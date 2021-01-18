@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf8">
+        <link rel="stylesheet" type="text/css" href="{{ url_for( 'static', filename='css/style.css', v=8) }}">
+    </head>
+
+    <body>
+        <div class="page_title">
+            <h2>Scraping results by Python</h2>
+        </div>
+        
+        <div class="reuslts_block">
+            <div class="results_table">
+                
+                <table border="1" cellspacing="0" cellpadding="5" align="center">
+                    <tr>
+                        <th>post_id</th>
+                        {% for col_title in scraped_data['post_1'] %}
+
+                        <th>{{col_title}}</th>
+                        
+
+                        {% endfor %}
+                    </tr>
+
+
+                    {% for post_id, post_body in scraped_data.items() %}
+                        <tr>
+                            <td> {{post_id}} </td>
+                                {% for key, value in post_body.items() %}
+
+                                    <td> {{value}} </td>
+
+                                {% endfor %}
+                            
+
+                        </tr>
+                    {% endfor %}
+                </table>
+                
+            </div>
+        </div>
+    </body>
+</html>

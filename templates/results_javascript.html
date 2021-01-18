@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf8">
+        <link rel="stylesheet" type="text/css" href="{{ url_for( 'static', filename='css/style.css', v=8) }}">
+    </head>
+
+    <body>
+
+
+
+        <div class="page_title">
+            <h2>Scraping results by Javascript</h2>
+        </div>
+        
+        <div class="results_block">
+            
+
+            <div class="posts_table"></div>
+        </div>
+        
+        <script type="text/javascript">
+            var posts = {{ scraped_data| tojson }};
+        </script>
+        <script type="text/javascript" scraped_data={{scraped_data|tojson}} src=" {{ url_for('static', filename='javascript/script.js') }}"></script>
+    
+    
+    </body>
+</html>
